@@ -1,5 +1,4 @@
 'use client';
-
 import React from 'react';
 import BoxTime from '../box-time/box-time';
 import styles from './BoxTimeGroup.module.scss';
@@ -11,28 +10,34 @@ const BoxTimeGroup: React.FC = () => {
 
   return (
     <>
-    <div className={styles.wrapper}>
+      <div className={styles.wrapper}>
+        <div className={styles.message}>
+          <p>Oi amor, faz</p>
+        </div>
+
         <div className={styles.days}>
-            <p>dias</p>
+            <p>Dias</p>
             <BoxTime value={days} />
         </div>
-        <p>:</p>
+  
         <div className={styles.hours}>
-            <p>horas</p>
+            <p>Horas</p>
             <BoxTime value={hours} />
         </div>
-        <p>:</p>
+  
         <div className={styles.minutes}>
-            <p>minutos</p>
+            <p>Minutos</p>
             <BoxTime value={minutes} />
         </div>
-      <p>:</p>
-      <div className={styles.seconds}>
-      <p>segundos</p>
-      <BoxTime value={seconds} />
+
+        <div className={styles.seconds}>
+          <p>Segundos</p>
+          <BoxTime value={seconds} />
+        </div>
+        <div className={styles.message2}>
+          <p>Que eu TE AMO</p>
+        </div>
       </div>
-     
-    </div>
     </>
   );
 };
