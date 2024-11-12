@@ -1,25 +1,24 @@
-import React from "react";
-import BoxTime from "../box-time/box-time";
-import styles from './BoxTimeGroup.module.scss'
+'use client';
 
+import React from 'react';
+import BoxTime from '../box-time/box-time';
+import styles from './BoxTimeGroup.module.scss';
+import useDateCounter from '@/hooks/useDateCounter';
 
+const BoxTimeGroup: React.FC = () => {
+  const startDate = new Date('2024-08-04'); 
+  const { days, hours, minutes, seconds } = useDateCounter(startDate);
 
-const BoxTimeGroup = () => {
   return (
-    
-    <>
-    <div className= {styles.wrapper}>
-    <BoxTime value={5} />
-    <BoxTime value={10} />
-    <p>:</p>
-    <BoxTime value={5} />
-    <BoxTime value={10} />
-    <p>:</p>
-    <BoxTime value={5} />
-    <BoxTime value={10} />
+    <div className={styles.wrapper}>
+      <BoxTime value={days} />
+      <p>:</p>
+      <BoxTime value={hours} />
+      <p>:</p>
+      <BoxTime value={minutes} />
+      <p>:</p>
+      <BoxTime value={seconds} />
     </div>
-    </>  
-
   );
 };
 
