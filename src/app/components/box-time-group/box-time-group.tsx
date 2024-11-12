@@ -10,15 +10,30 @@ const BoxTimeGroup: React.FC = () => {
   const { days, hours, minutes, seconds } = useDateCounter(startDate);
 
   return (
+    <>
     <div className={styles.wrapper}>
-      <BoxTime value={days} />
+        <div className={styles.days}>
+            <p>dias</p>
+            <BoxTime value={days} />
+        </div>
+        <p>:</p>
+        <div className={styles.hours}>
+            <p>horas</p>
+            <BoxTime value={hours} />
+        </div>
+        <p>:</p>
+        <div className={styles.minutes}>
+            <p>minutos</p>
+            <BoxTime value={minutes} />
+        </div>
       <p>:</p>
-      <BoxTime value={hours} />
-      <p>:</p>
-      <BoxTime value={minutes} />
-      <p>:</p>
+      <div className={styles.seconds}>
+      <p>segundos</p>
       <BoxTime value={seconds} />
+      </div>
+     
     </div>
+    </>
   );
 };
 

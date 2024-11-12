@@ -33,7 +33,7 @@ const useDateCounter = (startDate: Date): TimeDifference => {
     const interval = setInterval(calculateTimeDiff, 1000);
 
     return () => clearInterval(interval);
-  }, [startDate]);
+  }, []); 
 
   return timeDiff;
 };
