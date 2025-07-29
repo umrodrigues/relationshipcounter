@@ -21,7 +21,7 @@ export const useDateCounter = (startDate: Date): TimeDifference => {
   useEffect(() => {
     const calculateTimeDiff = () => {
       const now = new Date();
-      let diffInMs = now.getTime() - startDate.getTime();
+      const diffInMs = now.getTime() - startDate.getTime();
 
       const seconds = Math.floor((diffInMs / 1000) % 60);
       const minutes = Math.floor((diffInMs / (1000 * 60)) % 60);
